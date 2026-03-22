@@ -1,0 +1,61 @@
+.cta-banner {
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-primary);
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.cta-inner {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-inner h2 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  margin-bottom: 16px;
+}
+
+.cta-inner p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 550px;
+  margin: 0 auto 36px;
+}
+
+.cta-inner .btn {
+  animation: pulse-glow 3s infinite;
+}
+
+/* Decorative dots */
+.cta-banner .cta-dot {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.15;
+}
+
+.cta-dot.d1 {
+  width: 200px;
+  height: 200px;
+  background: var(--primary);
+  top: -60px;
+  left: -60px;
+  filter: blur(60px);
+}
+
+.cta-dot.d2 {
+  width: 150px;
+  height: 150px;
+  background: var(--secondary);
+  bottom: -40px;
+  right: -40px;
+  filter: blur(50px);
+}

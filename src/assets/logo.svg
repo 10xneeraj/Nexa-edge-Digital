@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 48" width="350" height="48">
+  <defs>
+    <linearGradient id="cube-top" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D4AA"/>
+      <stop offset="100%" stop-color="#6EE7B7"/>
+    </linearGradient>
+    <linearGradient id="cube-left" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#4C1D95"/>
+    </linearGradient>
+    <linearGradient id="cube-right" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6C3CE1"/>
+      <stop offset="100%" stop-color="#3B0764"/>
+    </linearGradient>
+  </defs>
+
+  <!-- High-End Isometric Data Cube -->
+  <g transform="translate(6, 4) scale(1.1)">
+    <!-- Top Face (Cyan) -->
+    <polygon points="16,0 32,9 16,18 0,9" fill="url(#cube-top)" />
+    <!-- Left Face (Dark Purple) -->
+    <polygon points="0,9 16,18 16,36 0,27" fill="url(#cube-left)" />
+    <!-- Right Face (Purple) -->
+    <polygon points="16,18 32,9 32,27 16,36" fill="url(#cube-right)" opacity="0.8" />
+    
+    <!-- Facet Inner Highlights (Glowing Edges) -->
+    <polyline points="0,9 16,18 32,9" fill="none" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1.5" />
+    <line x1="16" y1="18" x2="16" y2="36" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1.5" />
+  </g>
+
+  <!-- Authoritative Wordmark -->
+  <text x="56" y="34" font-family="'Outfit', 'Inter', system-ui, sans-serif" letter-spacing="1">
+    <tspan font-weight="900" font-size="28" fill="#FFFFFF">NEXA</tspan>
+    <tspan font-weight="300" font-size="28" fill="#E2DDF8">EDGE</tspan>
+  </text>
+  
+  <!-- Divider -->
+  <rect x="238" y="14" width="2" height="22" fill="url(#cube-top)" rx="1"/>
+  
+  <!-- Agency Specifics -->
+  <text x="250" y="24" font-family="'Inter', system-ui, sans-serif" font-weight="700" font-size="9" fill="#FFFFFF" letter-spacing="3.5">PERFORMANCE</text>
+  <text x="250" y="35" font-family="'Inter', system-ui, sans-serif" font-weight="500" font-size="9" fill="#00D4AA" letter-spacing="3.5">MARKETING</text>
+</svg>
