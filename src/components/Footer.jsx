@@ -1,6 +1,7 @@
 import './Footer.css';
 import logo from '../assets/logo.svg';
 import Icon from './Icon';
+import ScrollLink from './ScrollLink';
 
 const quickLinks = [
   { label: 'Home', href: '#hero' },
@@ -25,9 +26,9 @@ export default function Footer() {
     <footer className="footer" id="footer">
       <div className="container footer-grid">
         <div className="footer-brand">
-          <a href="#hero" className="footer-logo">
+          <ScrollLink to="#hero" className="footer-logo">
             <img src={logo} alt="NexaEdge Digital" />
-          </a>
+          </ScrollLink>
           <p>
             Performance marketing for brands that measure everything.
             We turn ad spend into revenue and traffic into pipeline.
@@ -44,7 +45,7 @@ export default function Footer() {
           <h4>Company</h4>
           <ul>
             {quickLinks.map((link, i) => (
-              <li key={i}><a href={link.href}>{link.label}</a></li>
+              <li key={i}><ScrollLink to={link.href}>{link.label}</ScrollLink></li>
             ))}
           </ul>
         </div>
@@ -53,7 +54,7 @@ export default function Footer() {
           <h4>Capabilities</h4>
           <ul>
             {serviceLinks.map((s, i) => (
-              <li key={i}><a href="#services">{s}</a></li>
+              <li key={i}><ScrollLink to="#services">{s}</ScrollLink></li>
             ))}
           </ul>
         </div>

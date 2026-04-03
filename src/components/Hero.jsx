@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import './Hero.css';
+import ScrollLink from './ScrollLink';
 
 export default function Hero() {
   const statsRef = useRef(null);
@@ -115,12 +116,12 @@ export default function Hero() {
           </p>
 
           <div className="hero-buttons">
-            <a href="#contact" className="btn btn-primary btn-shimmer">
+            <ScrollLink to="#contact" className="btn btn-primary btn-shimmer">
               Book a Strategy Call
-            </a>
-            <a href="#portfolio" className="btn btn-secondary">
+            </ScrollLink>
+            <ScrollLink to="#portfolio" className="btn btn-secondary">
               See Our Results
-            </a>
+            </ScrollLink>
           </div>
 
           <div className="hero-stats" ref={statsRef}>

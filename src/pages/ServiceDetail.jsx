@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { servicesData } from '../data/servicesData';
 import './ServiceDetail.css';
+import ScrollLink from '../components/ScrollLink';
 
 export default function ServiceDetail() {
   const { id } = useParams();
@@ -31,7 +32,7 @@ export default function ServiceDetail() {
             <h1 className="service-headline">{service.headline}</h1>
             <p className="service-intro">{service.intro}</p>
             <div className="service-cta-group">
-              <a href="/#contact" className="btn btn-primary">Claim Your Strategy Session</a>
+              <ScrollLink to="#contact" className="btn btn-primary">Claim Your Strategy Session</ScrollLink>
             </div>
           </div>
         </div>
@@ -86,7 +87,7 @@ export default function ServiceDetail() {
         <div className="container text-center">
           <h2>Ready to scale your {service.title.split(' ')[0]}?</h2>
           <p>Stop leaving money on the table. Speak with our growth architects today.</p>
-          <a href="/#contact" className="btn btn-primary">Book Your Audit</a>
+          <ScrollLink to="#contact" className="btn btn-primary">Book Your Audit</ScrollLink>
         </div>
       </section>
     </div>

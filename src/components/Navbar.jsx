@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './Navbar.css';
 import logo from '../assets/logo.svg';
+import ScrollLink from './ScrollLink';
 
 const navLinks = [
   { label: 'Home', href: '#hero' },
@@ -28,18 +29,18 @@ export default function Navbar() {
     <>
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="container navbar-inner">
-          <a href="#hero" className="navbar-logo">
+          <ScrollLink to="#hero" className="navbar-logo">
             <img src={logo} alt="NexaEdge Digital" />
-          </a>
+          </ScrollLink>
 
           <div className="navbar-links">
             {navLinks.map(link => (
-              <a key={link.href} href={link.href}>{link.label}</a>
+              <ScrollLink key={link.href} to={link.href}>{link.label}</ScrollLink>
             ))}
           </div>
 
           <div className="navbar-cta" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <a href="#contact" className="btn btn-primary">Get Started</a>
+            <ScrollLink to="#contact" className="btn btn-primary">Get Started</ScrollLink>
           </div>
 
           <button
@@ -55,12 +56,12 @@ export default function Navbar() {
       <div className={`mobile-overlay ${menuOpen ? 'open' : ''}`} onClick={closeMenu} />
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
         {navLinks.map(link => (
-          <a key={link.href} href={link.href} onClick={closeMenu}>{link.label}</a>
+          <ScrollLink key={link.href} to={link.href} onClick={closeMenu}>{link.label}</ScrollLink>
         ))}
         <div style={{ marginTop: '24px' }}>
-          <a href="#contact" className="btn btn-primary" onClick={closeMenu} style={{ width: '100%' }}>
+          <ScrollLink to="#contact" className="btn btn-primary" onClick={closeMenu} style={{ width: '100%', display: 'inline-block' }}>
             Get Started
-          </a>
+          </ScrollLink>
         </div>
       </div>
     </>

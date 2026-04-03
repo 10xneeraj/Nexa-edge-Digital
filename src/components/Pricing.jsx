@@ -1,5 +1,6 @@
 import './Pricing.css';
 import useScrollReveal from '../hooks/useScrollReveal';
+import ScrollLink from './ScrollLink';
 
 const plans = [
   {
@@ -86,12 +87,12 @@ export default function Pricing() {
                 ))}
               </ul>
 
-              <a
-                href="#contact"
+              <ScrollLink
+                to="#contact"
                 className={`btn ${plan.featured ? 'btn-primary' : 'btn-secondary'}`}
               >
                 {plan.cta}
-              </a>
+              </ScrollLink>
             </div>
           ))}
         </div>
