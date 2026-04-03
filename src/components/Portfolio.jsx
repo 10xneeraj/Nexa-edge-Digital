@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './Portfolio.css';
 import useScrollReveal from '../hooks/useScrollReveal';
+import resultsBg from '../assets/results_bg.png';
 
 const categories = ['All', 'SEO', 'Paid', 'Social', 'Web'];
 
@@ -51,11 +52,22 @@ export default function Portfolio() {
         <div className="portfolio-grid">
           {filtered.map((p, i) => (
             <div className="portfolio-card" key={`${active}-${i}`}>
-              <div className="portfolio-image" style={{
-                background: `linear-gradient(135deg, ${p.color}15, ${p.color}06)`
-              }}>
-                <span className="portfolio-metric" style={{ color: p.color }}>{p.metric}</span>
+              <img src={resultsBg} className="portfolio-card-bg" alt="Data Flow" />
+              
+              <div className="portfolio-image" style={{ zIndex: 1, position: 'relative', display: 'flex', flexDirection: 'column', padding: '24px' }}>
+                <span className="portfolio-metric" style={{ 
+                  background: `linear-gradient(135deg, ${p.color}, #e0e0f5)`, 
+                  WebkitBackgroundClip: 'text', 
+                  WebkitTextFillColor: 'transparent' 
+                }}>{p.metric}</span>
+                
+                <div className="portfolio-chart-container">
+                  <div className="portfolio-bar" style={{height: '35%', background: p.color, opacity: 0.6, animationDelay: '0.1s'}}></div>
+                  <div className="portfolio-bar" style={{height: '65%', background: p.color, opacity: 0.8, animationDelay: '0.2s'}}></div>
+                  <div className="portfolio-bar" style={{height: '100%', background: p.color, animationDelay: '0.3s'}}></div>
+                </div>
               </div>
+
               <div className="portfolio-overlay">
                 <span className="portfolio-cat">{p.category}</span>
                 <h4>{p.title}</h4>
