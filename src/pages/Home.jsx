@@ -1,4 +1,3 @@
-import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Partners from '../components/Partners';
 import TrustedBy from '../components/TrustedBy';
@@ -12,16 +11,10 @@ import Pricing from '../components/Pricing';
 import Team from '../components/Team';
 import Blog from '../components/Blog';
 import Contact from '../components/Contact';
-import Footer from '../components/Footer';
-import Preloader from '../components/Preloader';
-import BackToTop from '../components/BackToTop';
-import FloatingWhatsApp from '../components/FloatingWhatsApp';
 
 export default function Home() {
   return (
     <>
-      <Preloader />
-      <Navbar />
       <Hero />
       <TrustedBy />
       <Partners />
@@ -36,9 +29,6 @@ export default function Home() {
       <Blog />
       <Contact />
       <CTA />
-      <Footer />
-      <FloatingWhatsApp />
-      <BackToTop />
     </>
   );
 }
