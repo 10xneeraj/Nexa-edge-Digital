@@ -44,7 +44,7 @@ export default function Team() {
           Senior people. <span className="gradient-text">No interns.</span>
         </h2>
         <p className="section-subtitle reveal">
-          Your account is managed by people who've done this at scale —
+          Your account is managed by people who've done this at scale.
           not by someone who just graduated a certification course.
         </p>
 

@@ -5,7 +5,7 @@ import Icon from './Icon';
 
 const testimonials = [
   {
-    quote: "Before NexaEdge, we were burning $40K/month on ads with nothing to show for it. Within 90 days they restructured our entire Google Ads account, cut our CPA by 62%, and we've scaled to $120K/month in spend — profitably. These aren't just marketers, they're growth engineers.",
+    quote: "Before NexaEdge, we were burning $40K/month on ads with nothing to show for it. Within 90 days they restructured our entire Google Ads account, cut our CPA by 62%, and we've scaled to $120K/month in spend, profitably. These aren't just marketers, they're growth engineers.",
     name: 'Daniel Ortiz',
     role: 'VP Marketing, Meridian SaaS',
     result: 'CPA reduced 62%'
@@ -17,13 +17,13 @@ const testimonials = [
     result: '$2.4M pipeline · Q1'
   },
   {
-    quote: "Our organic traffic was flatlined for two years. NexaEdge tore apart our site architecture, rebuilt our content strategy around search intent, and we went from 800 to 14,000 monthly visitors. More importantly, those visitors convert — our demo requests are up 5x.",
+    quote: "Our organic traffic was flatlined for two years. NexaEdge tore apart our site architecture, rebuilt our content strategy around search intent, and we went from 800 to 14,000 monthly visitors. More importantly, those visitors convert. Our demo requests are up 5x.",
     name: 'Amit Khanna',
     role: 'CEO, PureForm Health',
     result: '800 → 14K visitors'
   },
   {
-    quote: "I was skeptical about another agency making promises. NexaEdge didn't promise — they showed us the model, the milestones, and the math. Six months later we'd 4x'd our Instagram following and our DTC revenue was up 190%. Wish we'd found them sooner.",
+    quote: "I was skeptical about another agency making promises. NexaEdge didn't promise. They showed us the model, the milestones, and the math. Six months later we'd 4x'd our Instagram following and our DTC revenue was up 190%. Wish we'd found them sooner.",
     name: 'Lisa Bergström',
     role: 'Brand Director, Bloom & Bottle',
     result: '+190% DTC revenue'

@@ -13,12 +13,12 @@ const quickLinks = [
 ];
 
 const serviceLinks = [
-  'SEO & Organic',
-  'Paid Media',
-  'Social & Content',
-  'Web Design & CRO',
-  'Email & Lifecycle',
-  'Strategy & Analytics',
+  { label: 'SEO & Organic Growth', path: '/service/seo' },
+  { label: 'Paid Media Performance', path: '/service/ppc' },
+  { label: 'Social & Community', path: '/service/social' },
+  { label: 'Web Design & CRO', path: '/service/web' },
+  { label: 'Email & Lifecycle', path: '/service/email' },
+  { label: 'Content & Demand Gen', path: '/service/content' },
 ];
 
 export default function Footer() {
@@ -54,7 +54,7 @@ export default function Footer() {
           <h4>Capabilities</h4>
           <ul>
             {serviceLinks.map((s, i) => (
-              <li key={i}><ScrollLink to="#services">{s}</ScrollLink></li>
+              <li key={i}><ScrollLink to={s.path}>{s.label}</ScrollLink></li>
             ))}
           </ul>
         </div>

@@ -111,7 +111,7 @@ export default function Hero() {
 
           <p className="hero-desc">
             NexaEdge is the performance agency behind 180+ brands that outrank,
-            outspend, and outperform their competition — with strategy that's
+            outspend, and outperform their competition with strategy that's
             accountable to every dollar.
           </p>
 

@@ -5,14 +5,14 @@ import Icon from './Icon';
 const blogPosts = [
   {
     title: 'We Audited 200 Google Ads Accounts. Here\'s What 90% Get Wrong.',
-    excerpt: 'After reviewing $18M in combined ad spend, these are the five structural mistakes that silently drain budgets — and the fixes that recovered an average of 34% wasted spend.',
+    excerpt: 'After reviewing $18M in combined ad spend, these are the five structural mistakes that silently drain budgets. We cover the fixes that recovered an average of 34% wasted spend.',
     category: 'Paid Media',
     date: 'Mar 2026',
     readTime: '8 min read',
   },
   {
     title: 'The Content Cluster Playbook That Took a Client from 0 to 14K Monthly Visitors',
-    excerpt: 'A step-by-step breakdown of the exact SEO content system we used for PureForm Health — including our topic research framework, internal linking model, and publishing cadence.',
+    excerpt: 'A step-by-step breakdown of the exact SEO content system we used for PureForm Health, including our topic research framework, internal linking model, and publishing cadence.',
     category: 'SEO',
     date: 'Feb 2026',
     readTime: '12 min read',

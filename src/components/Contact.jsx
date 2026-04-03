@@ -49,8 +49,8 @@ export default function Contact() {
             Let's build your <span className="gradient-text">growth engine</span>
           </h2>
           <p className="section-subtitle reveal">
-            Tell us about your business. We'll come back with a custom
-            strategy brief — no cost, no obligation, no pitch deck.
+            <p>Bring us your hardest funnel bottleneck. We'll build you a custom 
+            strategy brief: no cost, no obligation, no pitch deck.</p>
           </p>
         </div>
 

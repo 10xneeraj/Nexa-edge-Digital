@@ -29,9 +29,10 @@ export default function About() {
           </h2>
           <p className="about-desc reveal">
             Most agencies sell you a retainer and run the same playbook for every
-            client. We don't. Every strategy is custom-built around your margins,
-            your customer journey, and your competitive landscape — because
-            cookie-cutter marketing produces cookie-cutter results.
+            client. We don't. Every strategy is custom-built around your margins.
+            We obsess over your unit economics, your customer journey, 
+            and your competitive landscape. Because generating clicks is easy. 
+            Generating profitable growth requires engineering.
           </p>
 
           <div className="about-features">

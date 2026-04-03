@@ -27,7 +27,7 @@ export default function Services() {
           Full-funnel growth. <span className="gradient-text">Zero guesswork.</span>
         </h2>
         <p className="section-subtitle reveal">
-          Six disciplines, one integrated team. We don't silo channels — we
+          Six disciplines, one integrated team. We don't silo channels. We
           orchestrate them so every touchpoint drives measurable revenue.
         </p>
 

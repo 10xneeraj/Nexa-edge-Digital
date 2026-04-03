@@ -13,7 +13,7 @@ const steps = [
     num: '02',
     icon: 'barChart',
     title: 'Custom Roadmap',
-    desc: 'You get a 90-day plan with projected ROI, channel mix, budget allocation, and clear milestones — before you spend a dollar.'
+    desc: 'You get a 90-day plan with projected ROI, channel mix, budget allocation, and clear milestones before you spend a dollar.'
   },
   {
     num: '03',
@@ -40,7 +40,7 @@ export default function Process() {
           No fluff. <span className="gradient-text">Just a system that works.</span>
         </h2>
         <p className="section-subtitle reveal">
-          Every engagement follows this framework — refined across
+          Every engagement follows this rigorous framework, refined across
           180+ client launches over seven years.
         </p>
 

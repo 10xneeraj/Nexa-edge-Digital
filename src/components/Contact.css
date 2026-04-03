@@ -9,7 +9,7 @@
   margin-top: 60px;
 }
 
-/* Left — Contact Info */
+/* Left | Contact Info */
 .contact-info h3 {
   font-size: 1.5rem;
   margin-bottom: 16px;
@@ -80,7 +80,7 @@
   transform: translateY(-2px);
 }
 
-/* Right — Form */
+/* Right | Form */
 .contact-form-card {
   padding: 44px 36px;
 }
