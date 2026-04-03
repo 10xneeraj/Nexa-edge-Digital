@@ -15,6 +15,7 @@ import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import Preloader from '../components/Preloader';
 import BackToTop from '../components/BackToTop';
+import FloatingWhatsApp from '../components/FloatingWhatsApp';
 
 export default function Home() {
   return (
@@ -36,6 +37,7 @@ export default function Home() {
       <Contact />
       <CTA />
       <Footer />
+      <FloatingWhatsApp />
       <BackToTop />
     </>
   );

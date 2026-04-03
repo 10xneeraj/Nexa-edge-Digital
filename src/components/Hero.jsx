@@ -142,19 +142,42 @@ export default function Hero() {
         <div className="hero-visual">
           <div className="hero-orb" />
 
-          <div className="hero-float-card card-1">
-            <div className="card-value" style={{color: 'var(--secondary)'}}>↑ 340%</div>
-            <div className="card-label">Organic Traffic · 6mo</div>
+          <div className="hero-graph-container">
+            <svg viewBox="0 0 400 150" className="animated-graph">
+              <defs>
+                <linearGradient id="graphGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="var(--secondary)" />
+                  <stop offset="100%" stopColor="var(--primary-light)" />
+                </linearGradient>
+                <linearGradient id="graphFillGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stopColor="rgba(0, 212, 170, 0.4)" />
+                  <stop offset="100%" stopColor="rgba(0, 212, 170, 0)" />
+                </linearGradient>
+              </defs>
+              <path className="graph-fill" d="M 0 120 C 50 120, 80 80, 130 90 C 180 100, 220 40, 270 50 C 320 60, 360 20, 400 10 L 400 150 L 0 150 Z" fill="url(#graphFillGradient)" />
+              <path className="graph-line" d="M 0 120 C 50 120, 80 80, 130 90 C 180 100, 220 40, 270 50 C 320 60, 360 20, 400 10" fill="none" stroke="url(#graphGradient)" strokeWidth="4" />
+            </svg>
+            <div className="graph-point pt-1"></div>
+            <div className="graph-point pt-2"></div>
+            <div className="graph-point pt-3"></div>
+            <div className="graph-badge">+142% Traffic</div>
           </div>
 
-          <div className="hero-float-card card-2">
-            <div className="card-value" style={{color: 'var(--primary-light)'}}>$2.4M</div>
-            <div className="card-label">Pipeline Generated · Q1</div>
-          </div>
+          <div className="hero-cards-row">
+            <div className="hero-float-card card-1">
+              <div className="card-value" style={{color: 'var(--secondary)'}}>↑ 340%</div>
+              <div className="card-label">Organic Traffic</div>
+            </div>
 
-          <div className="hero-float-card card-3">
-            <div className="card-value" style={{color: 'var(--accent)'}}>14:1</div>
-            <div className="card-label">Email Campaign ROI</div>
+            <div className="hero-float-card card-2">
+              <div className="card-value" style={{color: 'var(--primary-light)'}}>$2.4M</div>
+              <div className="card-label">Pipeline Q1</div>
+            </div>
+
+            <div className="hero-float-card card-3">
+              <div className="card-value" style={{color: 'var(--accent)'}}>14:1</div>
+              <div className="card-label">Email Campaign ROI</div>
+            </div>
           </div>
         </div>
       </div>
