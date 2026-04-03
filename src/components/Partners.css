@@ -1,36 +1,31 @@
 .partners-section {
-  padding: 60px 0;
-  background: var(--bg-dark-2);
+  padding: 40px 0;
+  background: #ffffff;
   position: relative;
   z-index: 10;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .partners-image-wrapper {
-  max-width: 900px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.95); /* Crisp white/glass panel so the logo background blends perfectly */
-  border-radius: var(--radius-lg);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+  padding: 0 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.3s ease;
-}
-
-.partners-image-wrapper:hover {
-  transform: translateY(-4px);
 }
 
 .partners-banner-img {
   width: 100%;
+  max-width: 900px;
   height: auto;
   object-fit: contain;
-  mix-blend-mode: multiply; /* Removes any slight off-white edges from the image */
 }
 
 @media (max-width: 768px) {
-  .partners-image-wrapper {
-    padding: 15px;
+  .partners-section {
+    padding: 30px 0;
   }
 }
