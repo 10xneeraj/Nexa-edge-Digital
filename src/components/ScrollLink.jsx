@@ -31,8 +31,12 @@ export default function ScrollLink({ to, children, className, onClick, ...props 
     }
   };
 
+  // Map to correct hash layout for browser preview and new-tabs.
+  // If `to` is just a section (e.g. '#about'), opening in new tab will navigate to root `#/`.
+  const hrefLink = to.startsWith('/') ? `#${to}` : '#/';
+
   return (
-    <a href={`/#${to}`} className={className} onClick={handleClick} {...props}>
+    <a href={hrefLink} className={className} onClick={handleClick} {...props}>
       {children}
     </a>
   );

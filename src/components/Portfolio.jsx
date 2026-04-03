@@ -33,8 +33,8 @@ export default function Portfolio() {
           Work that <span className="gradient-text">speaks for itself</span>
         </h2>
         <p className="section-subtitle reveal">
-          <p>No generic filler. No mockups. These are real campaigns with real
-          businesses. We optimize aggressively and we keep score.</p>
+          No generic filler. No mockups. These are real campaigns with real
+          businesses. We optimize aggressively and we keep score.
         </p>
 
         <div className="portfolio-filters reveal">
