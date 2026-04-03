@@ -4,6 +4,22 @@ import useScrollReveal from '../hooks/useScrollReveal';
 import Icon from './Icon';
 import { servicesData } from '../data/servicesData';
 
+import bgSeo from '../assets/unique_bg_seo.png';
+import bgPpc from '../assets/unique_bg_ppc.png';
+import bgSocial from '../assets/unique_bg_social.png';
+import bgContent from '../assets/unique_bg_content.png';
+import bgWeb from '../assets/unique_bg_web.png';
+import bgEmail from '../assets/unique_bg_email.png';
+
+export const serviceImages = {
+  seo: bgSeo,
+  ppc: bgPpc,
+  social: bgSocial,
+  content: bgContent,
+  web: bgWeb,
+  email: bgEmail
+};
+
 function getIconName(id) {
   const map = {
     seo: 'search',
@@ -34,13 +50,16 @@ export default function Services() {
         <div className="services-grid">
           {Object.entries(servicesData).map(([id, s], i) => (
             <Link to={`/service/${id}`} className="glass-card service-card reveal" key={i} style={{textDecoration: 'none'}}>
-              <div className="service-icon">
-                <Icon name={getIconName(id)} size={28} />
-              </div>
-              <h3>{s.title.split(' (')[0]}</h3>
-              <p>{s.intro}</p>
-              <div className="service-click-indicator" style={{marginTop: '15px', color: 'var(--secondary)', fontSize: '0.85rem', fontWeight: 600}}>
-                View Full Methodology →
+              <img src={serviceImages[id]} alt={s.title} className="service-card-bg" />
+              <div className="service-content-wrapper">
+                <div className="service-icon">
+                  <Icon name={getIconName(id)} size={28} />
+                </div>
+                <h3>{s.title.split(' (')[0]}</h3>
+                <p>{s.intro}</p>
+                <div className="service-click-indicator" style={{marginTop: '15px', color: 'var(--secondary)', fontSize: '0.85rem', fontWeight: 600}}>
+                  View Full Methodology →
+                </div>
               </div>
             </Link>
           ))}

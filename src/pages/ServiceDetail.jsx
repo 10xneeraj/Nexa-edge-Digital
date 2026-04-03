@@ -3,7 +3,22 @@ import { useParams, Link } from 'react-router-dom';
 import { servicesData } from '../data/servicesData';
 import './ServiceDetail.css';
 import ScrollLink from '../components/ScrollLink';
-import roiImage from '../assets/roi_dashboard.png';
+
+import bgSeo from '../assets/unique_bg_seo.png';
+import bgPpc from '../assets/unique_bg_ppc.png';
+import bgSocial from '../assets/unique_bg_social.png';
+import bgContent from '../assets/unique_bg_content.png';
+import bgWeb from '../assets/unique_bg_web.png';
+import bgEmail from '../assets/unique_bg_email.png';
+
+const serviceImages = {
+  seo: bgSeo,
+  ppc: bgPpc,
+  social: bgSocial,
+  content: bgContent,
+  web: bgWeb,
+  email: bgEmail
+};
 
 export default function ServiceDetail() {
   const { id } = useParams();
@@ -61,8 +76,8 @@ export default function ServiceDetail() {
             <div className="details-text">
               <div className="service-hero-visual reveal">
                 <img 
-                  src={roiImage} 
-                  alt="Performance Marketing ROI Dashboard Analytics"
+                  src={serviceImages[id]} 
+                  alt={`${service.title} Dashboard Analytics`}
                   style={{
                     width: '100%',
                     borderRadius: '24px',

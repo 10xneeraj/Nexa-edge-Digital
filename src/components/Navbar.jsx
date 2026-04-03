@@ -39,7 +39,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="navbar-cta" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <div className="navbar-cta">
             <ScrollLink to="/contact" className="btn btn-primary">Get Started</ScrollLink>
           </div>
 
@@ -58,11 +58,6 @@ export default function Navbar() {
         {navLinks.map(link => (
           <ScrollLink key={link.href} to={link.href} onClick={closeMenu}>{link.label}</ScrollLink>
         ))}
-        <div style={{ marginTop: '24px' }}>
-          <ScrollLink to="/contact" className="btn btn-primary" onClick={closeMenu} style={{ width: '100%', display: 'inline-block' }}>
-            Get Started
-          </ScrollLink>
-        </div>
       </div>
     </>
   );
