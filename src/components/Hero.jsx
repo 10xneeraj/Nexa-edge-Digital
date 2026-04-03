@@ -116,7 +116,7 @@ export default function Hero() {
           </p>
 
           <div className="hero-buttons">
-            <ScrollLink to="#contact" className="btn btn-primary btn-shimmer">
+            <ScrollLink to="/contact" className="btn btn-primary btn-shimmer">
               Book a Strategy Call
             </ScrollLink>
             <ScrollLink to="#portfolio" className="btn btn-secondary">

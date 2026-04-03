@@ -88,7 +88,7 @@ export default function Pricing() {
               </ul>
 
               <ScrollLink
-                to="#contact"
+                to="/contact"
                 className={`btn ${plan.featured ? 'btn-primary' : 'btn-secondary'}`}
               >
                 {plan.cta}

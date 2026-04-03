@@ -32,8 +32,8 @@ export default function Portfolio() {
           Work that <span className="gradient-text">speaks for itself</span>
         </h2>
         <p className="section-subtitle reveal">
-          No lorem ipsum. No mockups. These are real campaigns with real
-          numbers from real clients who gave us permission to share.
+          <p>No generic filler. No mockups. These are real campaigns with real
+          businesses. We optimize aggressively and we keep score.</p>
         </p>
 
         <div className="portfolio-filters reveal">

@@ -10,7 +10,7 @@ const navLinks = [
   { label: 'Portfolio', href: '#portfolio' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'Blog', href: '#blog' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 export default function Navbar() {
@@ -40,7 +40,7 @@ export default function Navbar() {
           </div>
 
           <div className="navbar-cta" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <ScrollLink to="#contact" className="btn btn-primary">Get Started</ScrollLink>
+            <ScrollLink to="/contact" className="btn btn-primary">Get Started</ScrollLink>
           </div>
 
           <button
@@ -59,7 +59,7 @@ export default function Navbar() {
           <ScrollLink key={link.href} to={link.href} onClick={closeMenu}>{link.label}</ScrollLink>
         ))}
         <div style={{ marginTop: '24px' }}>
-          <ScrollLink to="#contact" className="btn btn-primary" onClick={closeMenu} style={{ width: '100%', display: 'inline-block' }}>
+          <ScrollLink to="/contact" className="btn btn-primary" onClick={closeMenu} style={{ width: '100%', display: 'inline-block' }}>
             Get Started
           </ScrollLink>
         </div>

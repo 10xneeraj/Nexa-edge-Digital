@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { servicesData } from '../data/servicesData';
 import './ServiceDetail.css';
 import ScrollLink from '../components/ScrollLink';
+import roiImage from '../assets/roi_dashboard.png';
 
 export default function ServiceDetail() {
   const { id } = useParams();
@@ -32,7 +33,7 @@ export default function ServiceDetail() {
             <h1 className="service-headline">{service.headline}</h1>
             <p className="service-intro">{service.intro}</p>
             <div className="service-cta-group">
-              <ScrollLink to="#contact" className="btn btn-primary">Claim Your Strategy Session</ScrollLink>
+              <ScrollLink to="/contact" className="btn btn-primary">Claim Your Strategy Session</ScrollLink>
             </div>
           </div>
         </div>
@@ -58,6 +59,18 @@ export default function ServiceDetail() {
         <div className="container">
           <div className="details-grid">
             <div className="details-text">
+              <div className="service-hero-visual reveal">
+                <img 
+                  src={roiImage} 
+                  alt="Performance Marketing ROI Dashboard Analytics"
+                  style={{
+                    width: '100%',
+                    borderRadius: '24px',
+                    boxShadow: '0 24px 80px rgba(0,0,0,0.5)',
+                    objectFit: 'cover'
+                  }}
+                />
+              </div>
               <h3>The Methodology</h3>
               <p>{service.details}</p>
               
@@ -87,7 +100,7 @@ export default function ServiceDetail() {
         <div className="container text-center">
           <h2>Ready to scale your {service.title.split(' ')[0]}?</h2>
           <p>Stop leaving money on the table. Speak with our growth architects today.</p>
-          <ScrollLink to="#contact" className="btn btn-primary">Book Your Audit</ScrollLink>
+          <ScrollLink to="/contact" className="btn btn-primary">Book Your Audit</ScrollLink>
         </div>
       </section>
     </div>

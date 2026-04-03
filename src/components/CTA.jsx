@@ -1,4 +1,6 @@
 import './CTA.css';
+import useScrollReveal from '../hooks/useScrollReveal';
+import ScrollLink from './ScrollLink';
 
 export default function CTA({ variant }) {
   if (variant === 'mid') {
@@ -9,9 +11,9 @@ export default function CTA({ variant }) {
         <div className="container cta-inner">
           <h2>Stop guessing. <span className="gradient-text">Start compounding.</span></h2>
           <p>One call. A custom growth roadmap. No pitch deck, no sales pressure. Just honest strategy from people who've done it 180+ times.</p>
-          <a href="#contact" className="btn btn-accent">
+          <ScrollLink to="/contact" className="btn btn-accent">
             Claim Your Free Strategy Session
-          </a>
+          </ScrollLink>
         </div>
       </section>
     );
@@ -24,9 +26,9 @@ export default function CTA({ variant }) {
       <div className="container cta-inner">
         <h2>Your competitors are <span className="gradient-text">already investing.</span></h2>
         <p>Every month you wait is market share you hand to someone else. Let's fix that, starting this week.</p>
-        <a href="#contact" className="btn btn-accent">
+        <ScrollLink to="/contact" className="btn btn-accent">
           Talk to a Strategist Today
-        </a>
+        </ScrollLink>
       </div>
     </section>
   );

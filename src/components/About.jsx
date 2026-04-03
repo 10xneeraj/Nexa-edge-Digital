@@ -1,5 +1,6 @@
 import './About.css';
 import useScrollReveal from '../hooks/useScrollReveal';
+import agencyWorkflowImg from '../assets/agency_workflow.png';
 import Icon from './Icon';
 
 const features = [
@@ -47,16 +48,20 @@ export default function About() {
           <a href="#contact" className="btn btn-primary reveal">Let's Talk Strategy</a>
         </div>
 
-        <div className="about-visual">
-          <div className="about-stats-grid">
-            {stats.map((s, i) => (
-              <div className="glass-card about-stat-card reveal" key={i}>
-                <div className="stat-icon"><Icon name={s.icon} size={28} /></div>
-                <div className="stat-value">{s.value}</div>
-                <div className="stat-text">{s.text}</div>
-              </div>
-            ))}
-          </div>
+        <div className="about-visual reveal">
+          <div className="about-orb" />
+          <img 
+            src={agencyWorkflowImg} 
+            alt="NexaEdge Transparent Functional Architecture" 
+            style={{ 
+              width: '100%', 
+              borderRadius: '24px', 
+              boxShadow: '0 20px 60px rgba(0,0,0,0.6)', 
+              position: 'relative', 
+              zIndex: 10,
+              objectFit: 'cover'
+            }} 
+          />
         </div>
       </div>
     </section>

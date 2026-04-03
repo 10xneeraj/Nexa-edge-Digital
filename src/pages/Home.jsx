@@ -10,7 +10,6 @@ import Testimonials from '../components/Testimonials';
 import Pricing from '../components/Pricing';
 import Team from '../components/Team';
 import Blog from '../components/Blog';
-import Contact from '../components/Contact';
 
 export default function Home() {
   return (
@@ -27,7 +26,6 @@ export default function Home() {
       <Pricing />
       <Team />
       <Blog />
-      <Contact />
       <CTA />
     </>
   );
