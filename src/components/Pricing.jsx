@@ -3,51 +3,51 @@ import useScrollReveal from '../hooks/useScrollReveal';
 
 const plans = [
   {
-    tier: 'Starter',
-    price: '$999',
-    desc: 'Perfect for small businesses just getting started with digital marketing.',
+    tier: 'Infrastructure Build',
+    price: '$3,500',
+    desc: 'For brands needing technical overhauls: analytics, tracking, and conversion funnels.',
     features: [
-      { text: 'SEO Audit & Strategy', included: true },
-      { text: '5 Social Media Posts / Week', included: true },
-      { text: 'Google Analytics Setup', included: true },
-      { text: 'Monthly Performance Report', included: true },
-      { text: 'PPC Campaign Management', included: false },
-      { text: 'Dedicated Account Manager', included: false },
-      { text: 'Content Creation (Blog)', included: false },
+      { text: 'Server-Side Tracking Setup', included: true },
+      { text: 'Technical SEO Overhaul', included: true },
+      { text: 'GA4 / Tag Manager Architecture', included: true },
+      { text: 'Conversion Funnel Mapping', included: true },
+      { text: 'Live Dashboard Access', included: true },
+      { text: 'Media Buying Capital', included: false },
+      { text: 'Performance Guarantees', included: false },
     ],
-    cta: 'Get Started',
+    cta: 'Book an Audit',
     featured: false
   },
   {
-    tier: 'Growth',
-    price: '$2,499',
-    desc: 'Accelerate growth with comprehensive marketing across all channels.',
+    tier: 'Growth Sprint',
+    price: '$7,500',
+    desc: 'Aggressive 90-day sprints designed to rapidly capture market share.',
     features: [
-      { text: 'Full SEO Optimization', included: true },
-      { text: '15 Social Media Posts / Week', included: true },
-      { text: 'PPC Campaign Management', included: true },
-      { text: '4 Blog Posts / Month', included: true },
-      { text: 'Email Marketing Automation', included: true },
-      { text: 'Dedicated Account Manager', included: true },
-      { text: 'Bi-Weekly Strategy Calls', included: false },
+      { text: 'Paid Media Management (Multi-platform)', included: true },
+      { text: 'Weekly Conversion Rate Optimization', included: true },
+      { text: 'Custom Landing Page Builds', included: true },
+      { text: 'Email Lifecycle Automations', included: true },
+      { text: 'Bottom-funnel Content Generation', included: true },
+      { text: 'Dedicated Slack Channel', included: true },
+      { text: 'Performance-tied Bonuses', included: false },
     ],
-    cta: 'Start Growing',
+    cta: 'Start a Sprint',
     featured: true
   },
   {
-    tier: 'Enterprise',
-    price: '$4,999',
-    desc: 'Full-scale marketing operations for established brands seeking dominance.',
+    tier: 'Agency of Record',
+    price: 'Custom',
+    desc: 'Full-funnel takeover for established brands moving $50k+ in monthly ad spend.',
     features: [
-      { text: 'Advanced SEO & Link Building', included: true },
-      { text: 'Unlimited Social Media Content', included: true },
-      { text: 'Multi-Channel PPC Campaigns', included: true },
-      { text: '8 Blog Posts + Video Content', included: true },
-      { text: 'Advanced Email Sequences', included: true },
-      { text: 'Dedicated Strategy Team', included: true },
-      { text: 'Weekly Strategy Calls', included: true },
+      { text: 'Complete Channel Management', included: true },
+      { text: 'Custom Creative & Video Production', included: true },
+      { text: 'Advanced Attribution Modeling', included: true },
+      { text: 'Revenue-share Hybrid Pricing', included: true },
+      { text: 'On-site Quarterly Strategy Sessions', included: true },
+      { text: 'C-Suite Account Directors', included: true },
+      { text: 'Contractual Performance Guarantees', included: true },
     ],
-    cta: 'Contact Sales',
+    cta: 'Claim Your Territory',
     featured: false
   },
 ];
@@ -58,13 +58,12 @@ export default function Pricing() {
   return (
     <section className="pricing section" id="pricing" ref={ref}>
       <div className="container text-center">
-        <span className="section-label reveal">Pricing</span>
+        <span className="section-label reveal">Investment Models</span>
         <h2 className="section-title reveal">
-          Simple, Transparent <span className="gradient-text">Pricing</span>
+          We only scale when <span className="gradient-text">you scale</span>
         </h2>
         <p className="section-subtitle reveal">
-          Choose the plan that fits your goals. No hidden fees, no long-term
-          contracts — just results.
+          No mandatory 12-month retainers. We operate on performance-heavy frameworks where our incentives are tied directly to your pipeline and ROAS.
         </p>
 
         <div className="pricing-grid">
