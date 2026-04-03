@@ -106,13 +106,12 @@ export default function Hero() {
 
           <h1>
             We don't do marketing.
-            <span className="gradient-text">We engineer revenue.</span>
+            <span className="gradient-text">We deploy AI to engineer revenue.</span>
           </h1>
 
           <p className="hero-desc">
-            NexaEdge is the performance agency behind 180+ brands that outrank,
-            outspend, and outperform their competition with strategy that's
-            accountable to every dollar.
+            NexaEdge is the predictive AI performance agency behind 180+ brands that outrank,
+            outspend, and outperform their competition utilizing machine-learning technology.
           </p>
 
           <div className="hero-buttons">
