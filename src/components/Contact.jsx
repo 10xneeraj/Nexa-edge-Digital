@@ -17,14 +17,13 @@ export default function Contact() {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch('https://api.web3forms.com/submit', {
+      const res = await fetch('http://localhost:5000/api/contact', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          access_key: '6386d091-61c5-4959-abdd-ee7c9c703799',
           ...form
         })
       });
