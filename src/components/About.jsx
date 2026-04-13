@@ -30,8 +30,18 @@ export default function About() {
           </h2>
           <div className="about-desc reveal">
             <p style={{marginBottom: '15px'}}>Welcome to Nexa Edge, where predictive machine learning intercepts human intent to fuel your brand's explosive growth. We are a computational marketing agency dedicated to helping enterprises scale flawlessly in today’s hyper-competitive digital landscape.</p>
-            <p style={{marginBottom: '15px'}}>At Nexa Edge, we specialize in Predictive SEO, ML Paid Media, AI Social Engineering, and Algorithmic Content. Whether you're hunting for enterprise B2B leads or rapid D2C scalability, we ingest your data to generate the precise mathematical strategy needed to dominate your sector.</p>
-            <p style={{marginBottom: '30px'}}><strong>Our Mission:</strong> To replace subjective marketing guesswork with deterministic computational models. We aim to aggressively lower your Customer Acquisition Cost through AI logic, ensuring every dollar spent mathematically correlates to pipeline growth.</p>
+            <p style={{marginBottom: '20px'}}>Whether you're hunting for enterprise B2B leads or rapid D2C scalability, we ingest your data to generate the precise mathematical strategy needed to dominate your sector.</p>
+            
+            <div style={{ display: 'flex', gap: '20px', marginBottom: '30px', flexWrap: 'wrap' }}>
+              <div style={{ flex: '1 1 45%', background: 'var(--bg-glass)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid var(--primary)' }}>
+                <h4 style={{ color: 'var(--text-primary)', marginBottom: '8px' }}>Our Mission</h4>
+                <p style={{ fontSize: '0.9rem', marginBottom: 0 }}>To replace subjective marketing guesswork with deterministic computational models. We aggressively lower Customer Acquisition Cost, ensuring every dollar mathematically correlates to growth.</p>
+              </div>
+              <div style={{ flex: '1 1 45%', background: 'var(--bg-glass)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid var(--secondary)' }}>
+                <h4 style={{ color: 'var(--text-primary)', marginBottom: '8px' }}>Our Vision</h4>
+                <p style={{ fontSize: '0.9rem', marginBottom: 0 }}>To be a global leader in algorithmic digital transformation. We empower businesses to thrive in a competitive world through tailored, predictive strategies and measurable success.</p>
+              </div>
+            </div>
           </div>
 
           <div className="about-features">

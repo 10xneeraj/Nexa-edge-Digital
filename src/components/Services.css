@@ -146,6 +146,19 @@
   border-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Mockup image hover */
+.service-card:hover .mockup-img {
+  transform: scale(1.08);
+}
+
+.service-mockup {
+  transition: box-shadow 0.3s ease;
+}
+
+.service-card:hover .service-mockup {
+  box-shadow: 0 15px 40px rgba(108, 60, 225, 0.3) !important;
+}
+
 @media (max-width: 768px) {
   .services-grid {
     grid-template-columns: 1fr;
@@ -153,6 +166,15 @@
   }
   .service-card {
     padding: 30px 20px;
+  }
+  .capabilities-visuals {
+    flex-direction: column !important;
+    gap: 20px !important;
+    margin: 25px 0 40px 0 !important;
+  }
+  .capabilities-visuals > div {
+    min-width: unset !important;
+    max-width: 100% !important;
   }
 }
 

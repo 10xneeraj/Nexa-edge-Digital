@@ -12,6 +12,10 @@ import bgWeb from '../assets/unique_bg_web.png';
 import bgEmail from '../assets/unique_bg_email.png';
 import dashboard1 from '../assets/dashboard1.png';
 import dashboard2 from '../assets/dashboard2.png';
+import dashSocial from '../assets/dashboard_social.png';
+import dashContent from '../assets/dashboard_content.png';
+import dashWeb from '../assets/dashboard_web.png';
+import dashEmail from '../assets/dashboard_email.png';
 
 export const serviceImages = {
   seo: bgSeo,
@@ -20,6 +24,15 @@ export const serviceImages = {
   content: bgContent,
   web: bgWeb,
   email: bgEmail
+};
+
+export const serviceDashboards = {
+  seo: dashboard1,
+  ppc: dashboard2,
+  social: dashSocial,
+  content: dashContent,
+  web: dashWeb,
+  email: dashEmail
 };
 
 function getIconName(id) {
@@ -64,16 +77,21 @@ export default function Services() {
 
         <div className="services-grid">
           {Object.entries(servicesData).map(([id, s], i) => (
-            <Link to={`/service/${id}`} className="glass-card service-card reveal" key={i} style={{textDecoration: 'none'}}>
+            <Link to={`/service/${id}`} className="glass-card service-card reveal" key={i} style={{textDecoration: 'none', display: 'flex', flexDirection: 'column'}}>
               <img src={serviceImages[id]} alt={s.title} className="service-card-bg" />
-              <div className="service-content-wrapper">
+              <div className="service-content-wrapper" style={{ flexGrow: 1 }}>
                 <div className="service-icon">
                   <Icon name={getIconName(id)} size={28} />
                 </div>
                 <h3>{s.title.split(' (')[0]}</h3>
                 <h4 style={{fontSize: '1rem', color: 'var(--primary)', marginBottom: '10px'}}>{s.headline}</h4>
-                <p style={{fontSize: '0.9rem', opacity: 0.8}}>{s.intro}</p>
-                <div className="service-click-indicator" style={{marginTop: '15px', color: 'var(--secondary)', fontSize: '0.85rem', fontWeight: 600}}>
+                <p style={{fontSize: '0.9rem', opacity: 0.8, marginBottom: '20px'}}>{s.intro}</p>
+                
+                <div className="service-mockup" style={{ marginTop: 'auto', marginBottom: '16px', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', border: '1px solid rgba(255,255,255,0.1)', height: '140px' }}>
+                  <img src={serviceDashboards[id]} alt={`${s.title} UI`} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }} className="mockup-img" />
+                </div>
+
+                <div className="service-click-indicator" style={{color: 'var(--secondary)', fontSize: '0.85rem', fontWeight: 600}}>
                   View Full Methodology →
                 </div>
               </div>
