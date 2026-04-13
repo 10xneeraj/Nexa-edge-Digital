@@ -151,6 +151,9 @@
     grid-template-columns: 1fr;
     gap: 16px;
   }
+  .service-card {
+    padding: 30px 20px;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {

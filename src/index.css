@@ -293,11 +293,29 @@ p {
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   :root {
-    --section-padding: 60px 0;
+    --section-padding: 50px 0;
   }
 
   .container {
-    padding: 0 16px;
+    padding: 0 20px;
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  h2 {
+    font-size: 1.75rem !important;
+  }
+
+  .section-title {
+    margin-bottom: 15px;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 30px;
   }
 }
 

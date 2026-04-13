@@ -278,31 +278,63 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    min-height: auto;
+  }
+
   .hero-grid {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 40px;
   }
 
   .hero-desc {
     margin-left: auto;
     margin-right: auto;
+    font-size: 1rem;
   }
 
   .hero-buttons {
     justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
   }
 
   .hero-stats {
     justify-content: center;
-    gap: 32px;
+    gap: 20px;
+    flex-wrap: wrap;
   }
 
   .hero-stat {
     text-align: center;
+    flex: 1 1 40%;
   }
 
   .hero-visual {
+    display: flex;
+    min-height: auto;
+    padding-top: 20px;
+  }
+  
+  .hero-graph-container {
     display: none;
+  }
+  
+  .hero-cards-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .hero-orb {
+    width: 200px;
+    height: 200px;
   }
 }

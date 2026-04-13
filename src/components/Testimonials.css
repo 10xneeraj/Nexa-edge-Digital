@@ -159,3 +159,18 @@
     transform: translateX(-30px);
   }
 }
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    padding: 30px 20px;
+  }
+  .testimonial-quote {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .testimonial-card::before {
+    font-size: 4rem;
+    top: 5px;
+    left: 10px;
+  }
+}
