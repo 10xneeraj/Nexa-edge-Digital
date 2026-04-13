@@ -4,20 +4,16 @@ import { servicesData } from '../data/servicesData';
 import './ServiceDetail.css';
 import ScrollLink from '../components/ScrollLink';
 
-import bgSeo from '../assets/unique_bg_seo.png';
-import bgPpc from '../assets/unique_bg_ppc.png';
-import bgSocial from '../assets/unique_bg_social.png';
-import bgContent from '../assets/unique_bg_content.png';
-import bgWeb from '../assets/unique_bg_web.png';
-import bgEmail from '../assets/unique_bg_email.png';
+import dash1 from '../assets/dash_1.png';
+import dash2 from '../assets/dash_2.png';
 
 const serviceImages = {
-  seo: bgSeo,
-  ppc: bgPpc,
-  social: bgSocial,
-  content: bgContent,
-  web: bgWeb,
-  email: bgEmail
+  seo: dash1,
+  ppc: dash2,
+  social: dash1,
+  content: dash2,
+  web: dash1,
+  email: dash2
 };
 
 export default function ServiceDetail() {
