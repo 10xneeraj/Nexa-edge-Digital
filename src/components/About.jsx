@@ -51,21 +51,34 @@ export default function About() {
           <a href="#contact" className="btn btn-primary reveal">Let's Talk Strategy</a>
         </div>
 
-        <div className="about-visual reveal">
-          <div className="about-orb" />
-          <img 
-            src={agencyWorkflowImg} 
-            alt="NexaEdge Transparent Functional Architecture" 
-            style={{ 
-              width: '100%', 
-              borderRadius: '24px', 
-              boxShadow: '0 20px 60px rgba(0,0,0,0.6)', 
-              position: 'relative', 
-              zIndex: 10,
-              objectFit: 'cover'
-            }} 
-          />
-        </div>
+          <div className="about-visual reveal">
+            <div className="about-orb" />
+            <img 
+              src={agencyWorkflowImg} 
+              alt="NexaEdge Transparent Functional Architecture" 
+              style={{ 
+                width: '100%', 
+                borderRadius: '24px', 
+                boxShadow: '0 0 60px rgba(108, 60, 225, 0.4), 0 20px 40px rgba(0,0,0,0.6)', 
+                position: 'relative', 
+                zIndex: 10,
+                objectFit: 'cover',
+                border: '1px solid rgba(255, 255, 255, 0.1)'
+              }} 
+            />
+            
+            <div className="about-stats-grid" style={{ marginTop: '40px' }}>
+              {stats.map((s, i) => (
+                <div className="about-stat-card glass-card reveal" key={i} style={{ padding: '24px 20px' }}>
+                  <div className="stat-icon" style={{ color: 'var(--primary)', marginBottom: '8px' }}>
+                    <Icon name={s.icon} size={32} />
+                  </div>
+                  <div className="stat-value" style={{ fontSize: '1.8rem', marginBottom: '4px' }}>{s.value}</div>
+                  <div className="stat-text" style={{ fontSize: '0.8rem', opacity: 0.8 }}>{s.text}</div>
+                </div>
+              ))}
+            </div>
+          </div>
       </div>
     </section>
   );

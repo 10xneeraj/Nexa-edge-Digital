@@ -47,10 +47,12 @@ export default function Process() {
         <div className="process-steps">
           {steps.map((s, i) => (
             <div className="process-step reveal" key={i}>
-              <div className="step-number">{s.num}</div>
-              <div className="step-icon"><Icon name={s.icon} size={28} /></div>
-              <h4>{s.title}</h4>
-              <p>{s.desc}</p>
+              <div className="step-number">
+                <span style={{ fontSize: '0.9rem', opacity: 0.5, position: 'absolute', top: '-10px', left: '-10px', background: 'var(--bg-dark)', padding: '2px 8px', borderRadius: '10px', border: '1px solid var(--border-color)' }}>{s.num}</span>
+                <Icon name={s.icon} size={30} />
+              </div>
+              <h4 style={{ fontSize: '1.2rem', marginTop: '10px' }}>{s.title}</h4>
+              <p style={{ fontSize: '0.95rem' }}>{s.desc}</p>
             </div>
           ))}
         </div>

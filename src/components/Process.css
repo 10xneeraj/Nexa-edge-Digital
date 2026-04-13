@@ -27,13 +27,14 @@
 .process-steps::before {
   content: '';
   position: absolute;
-  top: 48px;
+  top: 40px;
   left: 12%;
   right: 12%;
-  height: 2px;
+  height: 3px;
   background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent), var(--primary));
   background-size: 200% 100%;
   animation: gradient-shift 4s linear infinite;
+  box-shadow: 0 0 15px var(--primary);
   z-index: 0;
 }
 
@@ -44,20 +45,19 @@
 }
 
 .step-number {
-  width: 72px;
-  height: 72px;
+  width: 80px;
+  height: 80px;
   margin: 0 auto 24px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 800;
+  color: var(--primary);
   background: var(--bg-dark);
   border: 2px solid var(--border-color);
   position: relative;
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: inset 0 0 20px rgba(108, 60, 225, 0.1);
 }
 
 .step-number::before {
