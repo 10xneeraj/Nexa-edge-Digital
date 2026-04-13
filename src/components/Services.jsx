@@ -56,7 +56,8 @@ export default function Services() {
                   <Icon name={getIconName(id)} size={28} />
                 </div>
                 <h3>{s.title.split(' (')[0]}</h3>
-                <p>{s.intro}</p>
+                <h4 style={{fontSize: '1rem', color: 'var(--primary)', marginBottom: '10px'}}>{s.headline}</h4>
+                <p style={{fontSize: '0.9rem', opacity: 0.8}}>{s.intro}</p>
                 <div className="service-click-indicator" style={{marginTop: '15px', color: 'var(--secondary)', fontSize: '0.85rem', fontWeight: 600}}>
                   View Full Methodology →
                 </div>

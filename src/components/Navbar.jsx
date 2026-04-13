@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react';
 import './Navbar.css';
 import logo from '../assets/logo.svg';
-import ScrollLink from './ScrollLink';
+import { Link } from 'react-router-dom';
 
 const navLinks = [
-  { label: 'Home', href: '#hero' },
-  { label: 'Services', href: '#services' },
-  { label: 'About', href: '#about' },
-  { label: 'Portfolio', href: '#portfolio' },
-  { label: 'Pricing', href: '#pricing' },
-  { label: 'Blog', href: '#blog' },
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services' },
+  { label: 'About', href: '/about' },
+  { label: 'Portfolio', href: '/portfolio' },
+  { label: 'Pricing', href: '/pricing' },
+  { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/contact' },
 ];
 
@@ -29,18 +29,18 @@ export default function Navbar() {
     <>
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="container navbar-inner">
-          <ScrollLink to="#hero" className="navbar-logo">
+          <Link to="/" className="navbar-logo">
             <img src={logo} alt="NexaEdge Digital" />
-          </ScrollLink>
+          </Link>
 
           <div className="navbar-links">
             {navLinks.map(link => (
-              <ScrollLink key={link.href} to={link.href}>{link.label}</ScrollLink>
+              <Link key={link.href} to={link.href}>{link.label}</Link>
             ))}
           </div>
 
           <div className="navbar-cta">
-            <ScrollLink to="/contact" className="btn btn-primary">Get Started</ScrollLink>
+            <Link to="/contact" className="btn btn-primary">Get Started</Link>
           </div>
 
           <button
@@ -56,7 +56,7 @@ export default function Navbar() {
       <div className={`mobile-overlay ${menuOpen ? 'open' : ''}`} onClick={closeMenu} />
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
         {navLinks.map(link => (
-          <ScrollLink key={link.href} to={link.href} onClick={closeMenu}>{link.label}</ScrollLink>
+          <Link key={link.href} to={link.href} onClick={closeMenu}>{link.label}</Link>
         ))}
       </div>
     </>
