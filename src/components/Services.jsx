@@ -10,6 +10,8 @@ import bgSocial from '../assets/unique_bg_social.png';
 import bgContent from '../assets/unique_bg_content.png';
 import bgWeb from '../assets/unique_bg_web.png';
 import bgEmail from '../assets/unique_bg_email.png';
+import dashboard1 from '../assets/dashboard1.png';
+import dashboard2 from '../assets/dashboard2.png';
 
 export const serviceImages = {
   seo: bgSeo,
@@ -42,10 +44,23 @@ export default function Services() {
         <h2 className="section-title reveal">
           Full-funnel growth. <span className="gradient-text">Zero guesswork.</span>
         </h2>
-        <p className="section-subtitle reveal">
+        <p className="section-subtitle reveal" style={{marginBottom: '20px'}}>
           Six disciplines, one integrated team. We don't silo channels. We
           orchestrate them so every touchpoint drives measurable revenue.
         </p>
+
+        {/* --- Injected Dashboard Images for Capabilities Visibility --- */}
+        <div className="capabilities-visuals reveal" style={{display: 'flex', gap: '30px', margin: '40px 0 60px 0', justifyContent: 'center', flexWrap: 'wrap'}}>
+            <div style={{flex: '1 1 45%', maxWidth: '500px', minWidth: '300px', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 20px 50px rgba(108,60,225,0.2)', border: '1px solid rgba(255,255,255,0.1)', position: 'relative'}}>
+              <div style={{position: 'absolute', top: '15px', left: '15px', background: 'rgba(0,0,0,0.7)', backdropFilter: 'blur(10px)', padding: '6px 14px', borderRadius: '20px', fontSize: '0.8rem', fontWeight: 'bold', border: '1px solid rgba(255,255,255,0.1)', zIndex: 10}}>LTV Optimization Engine</div>
+              <img src={dashboard1} alt="Predictive Analytics Dashboard Desktop" style={{width: '100%', height: '100%', display: 'block', objectFit: 'cover'}} />
+            </div>
+            <div style={{flex: '1 1 45%', maxWidth: '500px', minWidth: '300px', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 20px 50px rgba(0,212,170,0.15)', border: '1px solid rgba(255,255,255,0.1)', position: 'relative'}}>
+              <div style={{position: 'absolute', top: '15px', left: '15px', background: 'rgba(0,0,0,0.7)', backdropFilter: 'blur(10px)', padding: '6px 14px', borderRadius: '20px', fontSize: '0.8rem', fontWeight: 'bold', border: '1px solid rgba(255,255,255,0.1)', zIndex: 10}}>Real-Time Mobile Attribution</div>
+              <img src={dashboard2} alt="Real-Time Analytics Tablet Focus" style={{width: '100%', height: '100%', display: 'block', objectFit: 'cover'}} />
+            </div>
+        </div>
+        {/* ----------------------------------------------------------- */}
 
         <div className="services-grid">
           {Object.entries(servicesData).map(([id, s], i) => (
