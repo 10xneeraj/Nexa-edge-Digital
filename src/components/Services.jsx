@@ -79,15 +79,35 @@ export default function Services() {
             orchestrate them so every touchpoint drives measurable revenue.
           </motion.p>
 
-          <motion.div className="capabilities-visuals mb-60 mt-40 flex-center flex-wrap gap-30" variants={itemVariants}>
-              <div className="dashboard-preview-card green-glow">
-                <div className="dashboard-label">LTV Optimization Engine</div>
-                <img src={dashboard1} alt="Predictive Analytics Dashboard Desktop" className="dashboard-img" />
+          <motion.div className="ai-pipeline-visual mb-60 mt-40" variants={itemVariants}>
+            <div className="pipeline-container">
+              <div className="pipeline-node pulse-green">
+                <Icon name="database" size={28} />
+                <span>Raw Data Ingestion</span>
               </div>
-              <div className="dashboard-preview-card blue-glow">
-                <div className="dashboard-label">Real-Time Mobile Attribution</div>
-                <img src={dashboard2} alt="Real-Time Analytics Tablet Focus" className="dashboard-img" />
+              
+              <div className="pipeline-connector">
+                <div className="connector-dot"></div>
               </div>
+
+              <div className="pipeline-node pulse-purple core-node">
+                <Icon name="cpu" size={36} />
+                <span>Predictive ML Core</span>
+                <div className="core-rings">
+                  <div className="ring ring-1"></div>
+                  <div className="ring ring-2"></div>
+                </div>
+              </div>
+
+              <div className="pipeline-connector">
+                <div className="connector-dot"></div>
+              </div>
+
+              <div className="pipeline-node pulse-orange">
+                <Icon name="trendUp" size={28} />
+                <span>Exponential Revenue</span>
+              </div>
+            </div>
           </motion.div>
 
           <motion.div className="services-grid" variants={containerVariants}>
