@@ -13,10 +13,12 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import BackToTop from './components/BackToTop';
+import CustomCursor from './components/CustomCursor';
 
 function App() {
   return (
     <Router basename={import.meta.env.BASE_URL}>
+      <CustomCursor />
       <Preloader />
       <Navbar />
       <Routes>

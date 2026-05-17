@@ -1,94 +1,107 @@
+import { motion } from 'framer-motion';
 import './About.css';
 import useScrollReveal from '../hooks/useScrollReveal';
 import agencyWorkflowImg from '../assets/agency_workflow.png';
 import Icon from './Icon';
 
 const features = [
-  { title: 'Channel-agnostic thinking', desc: 'We don\'t push one channel. We find where your customers actually are and build the system to reach them.' },
-  { title: 'Radical transparency', desc: 'You own all accounts, all data, all creatives. Live dashboards. No black boxes, ever.' },
-  { title: 'Senior-only teams', desc: 'No junior account managers learning on your budget. Every person on your account has 5+ years in their discipline.' },
-  { title: 'Skin in the game', desc: 'We tie our fees to your performance. If we don\'t drive results, we don\'t get paid the same way.' },
+  { title: 'Channel-Agnostic', desc: 'We go where your customers are, not where agencies prefer.' },
+  { title: 'Radical Transparency', desc: 'Live dashboards. You own all data. No black boxes.' },
+  { title: 'Senior-Only Teams', desc: 'No juniors learning on your budget. 5+ years experience minimum.' },
+  { title: 'Skin in the Game', desc: 'Fees tied to performance. We don\'t get paid unless you grow.' },
 ];
 
 const stats = [
-  { icon: 'trendUp', value: '$42M+', text: 'Client Revenue Driven' },
+  { icon: 'trendUp', value: '$42M+', text: 'Revenue Driven' },
   { icon: 'users', value: '180+', text: 'Brands Scaled' },
-  { icon: 'award', value: '7 yrs', text: 'Average Client Tenure' },
+  { icon: 'award', value: '7 yrs', text: 'Avg. Client Tenure' },
   { icon: 'globe', value: '23', text: 'Industries Served' },
 ];
 
 export default function About() {
   const ref = useScrollReveal();
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
   return (
     <section className="about section" id="about" ref={ref}>
       <div className="container about-grid">
-        <div className="about-content">
-          <span className="section-label reveal">The Nexa Edge Difference</span>
-          <h2 className="section-title reveal">
+        <motion.div 
+          className="about-content"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <motion.span className="section-label" variants={itemVariants}>The Nexa Edge Difference</motion.span>
+          <motion.h2 className="section-title" variants={itemVariants}>
             Built for founders who <span className="gradient-text">demand predictability</span>
-          </h2>
-          <div className="about-desc reveal">
-            <p style={{marginBottom: '15px'}}>Welcome to Nexa Edge, where predictive machine learning intercepts human intent to fuel your brand's explosive growth. We are a computational marketing agency dedicated to helping enterprises scale flawlessly in today’s hyper-competitive digital landscape.</p>
-            <p style={{marginBottom: '20px'}}>Whether you're hunting for enterprise B2B leads or rapid D2C scalability, we ingest your data to generate the precise mathematical strategy needed to dominate your sector.</p>
+          </motion.h2>
+          
+          <motion.div className="about-desc" variants={itemVariants}>
+            <p className="mb-15">Stop burning cash on guesswork. We replace subjective marketing with deterministic computational models to eliminate wasted ad spend and stalled growth.</p>
+            <p className="mb-20">Whether you need enterprise B2B leads or rapid D2C scalability, we ingest your data to generate the precise mathematical strategy needed to dominate your sector.</p>
             
-            <div style={{ display: 'flex', gap: '20px', marginBottom: '30px', flexWrap: 'wrap' }}>
-              <div style={{ flex: '1 1 45%', background: 'var(--bg-glass)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid var(--primary)' }}>
-                <h4 style={{ color: 'var(--text-primary)', marginBottom: '8px' }}>Our Mission</h4>
-                <p style={{ fontSize: '0.9rem', marginBottom: 0 }}>To replace subjective marketing guesswork with deterministic computational models. We aggressively lower Customer Acquisition Cost, ensuring every dollar mathematically correlates to growth.</p>
+            <div className="mission-vision-grid">
+              <div className="mv-card mission-card">
+                <h4>Our Mission</h4>
+                <p>To ruthlessly lower Customer Acquisition Cost, ensuring every dollar mathematically correlates to growth.</p>
               </div>
-              <div style={{ flex: '1 1 45%', background: 'var(--bg-glass)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid var(--secondary)' }}>
-                <h4 style={{ color: 'var(--text-primary)', marginBottom: '8px' }}>Our Vision</h4>
-                <p style={{ fontSize: '0.9rem', marginBottom: 0 }}>To be a global leader in algorithmic digital transformation. We empower businesses to thrive in a competitive world through tailored, predictive strategies and measurable success.</p>
+              <div className="mv-card vision-card">
+                <h4>Our Vision</h4>
+                <p>To lead algorithmic digital transformation and empower businesses to thrive through predictive strategies.</p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="about-features">
-            {[
-              {title: 'Customized Algorithms', desc: 'Models tuned precisely to your unit economics.'},
-              {title: 'Senior Data Engineers', desc: 'A team obsessed with deterministic outcomes and predictive ROI.'},
-              {title: 'Innovation-Driven', desc: 'Deploying neural networks and live heatmaps for unfair advantages.'},
-              {title: 'Full-Stack Integration', desc: 'From branding architecture to automated pipeline lifecycle logic in one place.'}
-            ].map((f, i) => (
-              <div className="about-feature reveal" key={i}>
+          <motion.div className="about-features" variants={containerVariants}>
+            {features.map((f, i) => (
+              <motion.div className="about-feature" key={i} variants={itemVariants}>
                 <span className="feature-check"><Icon name="check" size={14} /></span>
                 <p><strong>{f.title}:</strong> {f.desc}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <motion.a href="#contact" className="btn btn-primary mt-20" variants={itemVariants}>
+            Let's Talk Strategy
+          </motion.a>
+        </motion.div>
+
+        <motion.div 
+          className="about-visual"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="about-orb" />
+          <img 
+            src={agencyWorkflowImg} 
+            alt="NexaEdge Transparent Functional Architecture" 
+            className="about-architecture-img"
+          />
+          
+          <div className="about-stats-grid mt-40">
+            {stats.map((s, i) => (
+              <div className="about-stat-card glass-card" key={i}>
+                <div className="stat-icon">
+                  <Icon name={s.icon} size={32} />
+                </div>
+                <div className="stat-value">{s.value}</div>
+                <div className="stat-text">{s.text}</div>
               </div>
             ))}
           </div>
-
-          <a href="#contact" className="btn btn-primary reveal">Let's Talk Strategy</a>
-        </div>
-
-          <div className="about-visual reveal">
-            <div className="about-orb" />
-            <img 
-              src={agencyWorkflowImg} 
-              alt="NexaEdge Transparent Functional Architecture" 
-              style={{ 
-                width: '100%', 
-                borderRadius: '24px', 
-                boxShadow: '0 0 60px rgba(108, 60, 225, 0.4), 0 20px 40px rgba(0,0,0,0.6)', 
-                position: 'relative', 
-                zIndex: 10,
-                objectFit: 'cover',
-                border: '1px solid rgba(255, 255, 255, 0.1)'
-              }} 
-            />
-            
-            <div className="about-stats-grid" style={{ marginTop: '40px' }}>
-              {stats.map((s, i) => (
-                <div className="about-stat-card glass-card reveal" key={i} style={{ padding: '24px 20px' }}>
-                  <div className="stat-icon" style={{ color: 'var(--primary)', marginBottom: '8px' }}>
-                    <Icon name={s.icon} size={32} />
-                  </div>
-                  <div className="stat-value" style={{ fontSize: '1.8rem', marginBottom: '4px' }}>{s.value}</div>
-                  <div className="stat-text" style={{ fontSize: '0.8rem', opacity: 0.8 }}>{s.text}</div>
-                </div>
-              ))}
-            </div>
-          </div>
+        </motion.div>
       </div>
     </section>
   );

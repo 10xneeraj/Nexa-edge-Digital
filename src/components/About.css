@@ -120,6 +120,52 @@
   background-clip: text;
 }
 
+.mb-15 { margin-bottom: 15px; }
+.mb-20 { margin-bottom: 20px; }
+.mt-20 { margin-top: 20px; display: inline-block; }
+.mt-40 { margin-top: 40px; }
+
+.mission-vision-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.mv-card {
+  flex: 1 1 45%;
+  background: var(--bg-glass);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.mission-card {
+  border-left: 4px solid var(--primary);
+}
+
+.vision-card {
+  border-left: 4px solid var(--secondary);
+}
+
+.mv-card h4 {
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.mv-card p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+.about-architecture-img {
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 0 60px rgba(108, 60, 225, 0.4), 0 20px 40px rgba(0,0,0,0.6);
+  position: relative;
+  z-index: 10;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 @media (max-width: 768px) {
   .about-grid {
     grid-template-columns: 1fr;
